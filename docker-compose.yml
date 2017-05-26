@@ -1,0 +1,6 @@
+version: '2.1'
+
+services:
+  docker-apt-mirror:
+    image: docker-apt-mirror
+    build: .
