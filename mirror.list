@@ -1,0 +1,50 @@
+############# config ##################
+#
+# Default variables are good enough.
+# set base_path    /var/spool/apt-mirror
+#
+# set mirror_path  $base_path/mirror
+# set skel_path    $base_path/skel
+# set var_path     $base_path/var
+# set cleanscript $var_path/clean.sh
+# set defaultarch  <running host architecture>
+# set postmirror_script $var_path/postmirror.sh
+# set run_postmirror 0
+set nthreads     20
+set _tilde 0
+#
+############# end config ##############
+
+# Start of repository URLs.
+
+## Ubuntu Precise (12.04)
+deb http://archive.ubuntu.com/ubuntu precise main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu precise-security main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu precise-updates main restricted universe multiverse
+
+## Ubuntu Lucid (10.04 LTS) (Only 32 bit, no 64 bit machines running 10.04)
+deb-i386 http://archive.ubuntu.com/ubuntu lucid main restricted universe multiverse
+deb-i386 http://archive.ubuntu.com/ubuntu lucid-security main restricted universe multiverse
+deb-i386 http://archive.ubuntu.com/ubuntu lucid-updates main restricted universe multiverse
+
+## Debian Stable (atm 6, squeeze)
+deb http://ftp.nl.debian.org/debian stable main contrib non-free
+
+## Only 64-bit packages for debian testing
+deb-amd64 http://ftp.nl.debian.org/debian testing main contrib non-free
+
+## No backports needed for me.
+## If needed, please uncomment.
+#deb http://archive.ubuntu.com/ubuntu precise-proposed main restricted universe multiverse
+#deb http://archive.ubuntu.com/ubuntu precise-backports main restricted universe multiverse
+
+## Also no deb-src.  
+#deb-src http://archive.ubuntu.com/ubuntu precise main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu precise-security main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu precise-updates main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu precise-proposed main restricted universe multiverse
+#deb-src http://archive.ubuntu.com/ubuntu precise-backports main restricted universe multiverse
+
+## I want to be able to downgrade the packages, so I don't want to clean up automatically.    
+# clean http://archive.ubuntu.com/ubuntu
+# clean http://ftp.nl.debian.org/debian
