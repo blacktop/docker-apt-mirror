@@ -1,10 +1,10 @@
 docker-apt-mirror
 =================
 
-Docker Apt-Mirror
-
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
 [![Docker Image](https://img.shields.io/badge/docker%20image-277%20GB-blue.svg)](https://hub.docker.com/r/blacktop/apt-mirror/)
+
+Docker Apt-Mirror
 
 ### Dependencies
 
